@@ -8,6 +8,7 @@ api = Api(app)
 
 names = {"Rohit": {"age": 18, "gender": "male"},
          "Tim": {"age": 19, "gender": "male"}}
+# use request parser to make things easier
 video_put_args = reqparse.RequestParser()
 video_put_args.add_argument("name", type=str, help="Name of the video is required", required=True)
 video_put_args.add_argument("views", type=str, help="Views on the video is required", required=True)
